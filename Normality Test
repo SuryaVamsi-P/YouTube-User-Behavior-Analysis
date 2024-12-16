@@ -1,0 +1,21 @@
+###   Normality Test (Kolmogorov-Smirnov Test)  ###
+
+print("\nKolmogorov-Smirnov Test\n")
+
+cols = ['views', 'likes', 'dislikes', 'comment_count']
+impdata = odata[cols].dropna()
+
+ks_results = {}
+for column in impdata.columns:
+    data = impdata[column]
+    stat, p_value = kstest(data, 'norm', args=(data.mean(), data.std()))
+    ks_results[column] = (stat, p_value)
+
+for column, results in ks_results.items():
+    stat, p_value = results
+    print(f'Column :- {column}')
+    print(f'K-S Statistic :- {stat}, P-value :- {p_value}')
+    if p_value > 0.05:
+        print("Normally distributed\n")
+    else:
+        print("Not Normally distributed\n")
