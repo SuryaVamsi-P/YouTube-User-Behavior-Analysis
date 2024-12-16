@@ -1,0 +1,24 @@
+###   HEATMAP & Pearson Correlation Coefficient(PCC)   ###
+
+odata = pd.read_csv('/Users/surya/Documents/Class files/Data visualization/FTP/FTP(Surya)/finaldata.csv')
+print("\nHeat Map,Scatter plot and Table\n")
+columns = ['views', 'likes', 'dislikes', 'comment_count']
+correlation_matrix = odata[columns].corr()
+plt.figure(figsize=(10, 8))
+sns.heatmap(correlation_matrix, annot=True, fmt=".2f", cmap='coolwarm',square=True, linewidths=.5, cbar_kws={"shrink": .5})
+plt.title('Heatmap of Pearson Correlation Coefficients for Selected Variables',fontdict={'fontname': 'serif', 'color': 'blue', 'size': 'large'})
+plt.show()
+
+sns.pairplot(odata[columns])
+plt.suptitle('Pair Plot for Selected Variables', fontdict={'fontname': 'serif', 'color': 'blue', 'size': 'large'}, y=1.02)
+plt.show()
+
+# Tabular format of all values
+
+descriptive_stats = odata[columns].describe()
+tab = pd.concat([correlation_matrix, descriptive_stats])
+table = PrettyTable()
+table.field_names = [""] + list(tab.columns)
+for index, row in tab.iterrows():
+    table.add_row([index] + row.tolist())
+print(table)
