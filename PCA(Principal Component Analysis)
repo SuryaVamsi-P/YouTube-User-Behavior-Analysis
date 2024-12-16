@@ -1,0 +1,15 @@
+###   PRINCIPAL COMPONENT ANALYSIS (PCA)   ###
+
+print("\nPrincipal Component Analysis(PCA)\n\n")
+odata = pd.read_csv('/Users/surya/Documents/Class files/Data visualization/FTP/FTP(Surya)/finaldata.csv')
+ncols = odata.select_dtypes(include=[np.number]).dropna()
+sc = StandardScaler()
+scaleddata = sc.fit_transform(ncols)
+pca = PCA(n_components=min(scaleddata.shape))
+pca.fit(scaleddata)
+sval = pca.singular_values_
+cdnum = sval.max() / sval.min()
+print("\nSingular values :-\n\n", sval)
+print("\nCondition number :-\n\n", cdnum)
+datatrans = pca.transform(scaleddata)
+print("\nTransformed Data Shape :-", datatrans.shape)
