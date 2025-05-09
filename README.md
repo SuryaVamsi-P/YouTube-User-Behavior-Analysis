@@ -1,24 +1,84 @@
-This project, titled "YouTube Pulse: Tracking Trends & Engagement," aims to leverage Python’s robust visualization libraries to derive deep insights from YouTube video trends data.
-Using the 'youtube.csv' dataset, this analysis explores the dynamics of YouTube video attributes such as views, likes, dislikes, and comment counts to understand user engagement across different content types.
+## YouTube Video Analytics Dashboard
 
-The primary goals of this project are to :-
+## Overview  
 
-                     i.) Conduct an exhaustive exploratory data analysis (EDA) to identify patterns, correlations, and dependencies.
-                     ii.) Visualize key features and their distribution, such as views, likes, and dislikes, to understand current trends on YouTube.
-                     iii.) Utilize statistical and machine learning techniques to predict future trends based on historical data.
+This project dives deep into **YouTube trending video analytics** through both **static visualization** and an **interactive dashboard**. Using raw `youtube.csv` data, the analysis explores how **video performance metrics (views, likes, comments)** relate to **time of publication**, **country**, and **channel** behavior.
 
-
-DATA SET :-
-
-                        i.) The project utilizes the 'youtube.csv' dataset, containing data on YouTube videos, including metrics like views, likes, dislikes, and comment counts, along with categorical data about video titles, channel names, and publication details.
-                        ii.) This dataset comprises 160,000 rows with various attributes spanning numerical, categorical, and boolean types.
+The objective was to **extract insights that guide content strategy**, optimize publishing time, and understand audience engagement patterns across different categories and geographies.
 
 
-Key Technologies :-
+## Key Features
+
+- **Statistical Analysis & Preprocessing**: 
+  - Outlier detection & treatment using IQR and Box-Cox transformation
+  - Normality testing using Kolmogorov-Smirnov test
+  - Correlation analysis via Pearson heatmaps
+
+- **Data Cleaning & Feature Engineering**: 
+  - Cleaned & transformed 14+ raw features (e.g. tags, publish time, part of day)
+  - Generated new attributes like `part_of_day`, `weekday`, `publish_country`, etc.
+
+- **Static Visualizations (Matplotlib & Seaborn)**:  
+  - Histograms, Boxplots, Heatmaps, Line Charts, Pie Charts, Contour Plots
+
+- **Interactive Dashboard (Dash & Plotly)**:
+  - Channel-level metrics: Views, Likes, Comments, Dislikes
+  - Time of day vs day-of-week publishing impact
+  - Country-wise distribution and trends
+  - Filters for year, country, and custom checklists
 
 
-                         i.) Python : Primary programming language for analysis and visualization.
-                         ii.) Dash : Used for building interactive web-based visualizations.
-                         iii.) Plotly : For creating interactive plots.
-                         iv.) Google Cloud Platform (GCP) : For deploying the interactive dashboard.
+- **Tech Stack**:  
+  `Python`, `Pandas`, `NumPy`, `Seaborn`, `Matplotlib`, `Plotly`, `Dash`, `Scikit-learn`, `PrettyTable`
 
+
+## Skills Demonstrated
+
+- Data wrangling & EDA  
+- Dimensionality Reduction (PCA)  
+- Dashboard development  
+- Data storytelling with plots  
+- Insights generation for strategic planning
+
+
+## Repository Structure
+
+```
+YouTube-Analytics-Dashboard
+├── FTP(G40559527).py                     # Full static analysis + plots
+├── Youtube Dashboard.py                  # Dash application for interactivity
+├── youtube.csv                           # Dataset
+├── Youtube Video Analysis(REPORT).pdf    # Summary report of project
+├── README.md                             # Project overview (this file)
+```
+
+
+## Insights Gleaned
+
+- **Afternoon videos gain higher engagement** across most categories.
+- Channels with consistent posting on **weekends outperform** others in views.
+- Certain countries show skewed like/comment ratios indicating regional behavior.
+
+
+## How to Run Locally
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/your-username/youtube-analytics-dashboard.git
+cd youtube-analytics-dashboard
+
+# 2. Install requirements
+pip install -r requirements.txt
+
+# 3. Run the Dash App
+python 'Youtube Dashboard.py'
+```
+
+## Let's Connect
+
+**Author**: Surya Vamsi Patiballa  
+**MS in Data Science**, George Washington University  
+svamsi2002@gmail.com  
+[My Resume] https://drive.google.com/file/d/19IKd1OQ20OhHBJkTkVk7T6zIfQ7EFibZ/view?usp=sharing
+
+[LinkedIn] https://www.linkedin.com/in/surya-patiballa-b724851aa/
