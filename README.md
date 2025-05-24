@@ -77,8 +77,8 @@ python 'Youtube Dashboard.py'
 ## Let's Connect
 
 **Author**: Surya Vamsi Patiballa  
-**MS in Data Science**, George Washington University  
-svamsi2002@gmail.com  
-[My Resume] https://drive.google.com/file/d/19IKd1OQ20OhHBJkTkVk7T6zIfQ7EFibZ/view?usp=sharing
+**MS in Data Science**, George Washington University
 
-[LinkedIn] https://www.linkedin.com/in/surya-patiballa-b724851aa/
+- Email  :-  svamsi2002@gmail.com  
+- Resume  :-  https://drive.google.com/file/d/178IYcArC6YYVdJiIwRmJYodzKZ-JXe-D/view?usp=sharing
+- LinkedIn  :-  https://www.linkedin.com/in/surya-patiballa-b724851aa/
